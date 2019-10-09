@@ -36,7 +36,7 @@ def repair(path, srcSuffix):
             raise Exception("fail to exec: cmd: %s, (%s, %s)" % ('file %s' % filename, status, output))
 
         output = output.split(':', 1)[1]
-        if srcSuffix.lower() in output or srcSuffix.upper() in output:
+        if srcSuffix.lower() in output.lower():
             srcfilename = filename[2:] if filename.startswith('.') else filename
             basename = srcfilename.split('.', 1)[0]
             dstfilename = './' + basename + '.' + srcSuffix
@@ -44,6 +44,9 @@ def repair(path, srcSuffix):
             os.rename(filename, dstfilename)
 
 class X:
+    def __str__(self):
+        return ''
+
     @staticmethod
     def x_shadow(path, conf):
         with open(conf, 'r') as f: buf = f.read()

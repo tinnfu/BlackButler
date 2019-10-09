@@ -17,10 +17,9 @@ such as:
     + way 2: tar zcf file into package
     + way 3: encrypt file
 4. an op path
-    + /path/to/BlackButler/op/stop\_shadow, will stop shadow file operation
-    + /path/to/BlackButler/op/stop\_period\_myTask1s.sh, will stop run myTask1s.sh operation
+    + /path/to/BlackButler/op/stop/shadow, will stop shadow file operation
+    + /path/to/BlackButler/op/stop/period/seconds/1/myTask1s.sh, will stop run myTask1s.sh operation
+    + /path/to/BlackButler/op/stop/BlackButler, will stop BlackButler deamon
     + /path/to/BlackButler/op/upgrade, will upgrade BlackButler from github
-    + /path/to/BlackButler/op/stop, will stop BlackButler
     + and so on
 5. let me see see ...
-
