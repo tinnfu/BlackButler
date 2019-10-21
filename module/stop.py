@@ -17,6 +17,9 @@ class Stop:
         self._monitor = monitor
 
     def probefile(self):
+        if not os.path.exists(self._rootpath):
+            os.mkdir(self._rootpath)
+
         fnames = GetAllFilepath(self._rootpath)
         for f in fnames:
             self.process(FsMsg(self.get_op_path(f), STOP_ADD))

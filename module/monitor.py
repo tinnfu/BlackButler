@@ -55,7 +55,7 @@ class FsMonitor:
         self._handler[basedir].set_monitor(self)
 
     def unregister(self, handler):
-        basedir = handler.rootpath
+        basedir = handler.rootpath + '/'
         assert basedir in self._handler
         del self._handler[basedir]
 
